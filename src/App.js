@@ -1,9 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import Rando from 'js-rando';
 
 function App() {
+  let rando = new Rando()
   return (
     <div className="App">
+      <p>{rando.RandomInt(1, 11)}</p>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
