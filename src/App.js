@@ -3,7 +3,7 @@ import './App.css';
 import Rando from 'js-rando';
 
 function App() {
-  let rando = new Rando()
+  const rando = new Rando()
 
   let rbg = rando.RandomRGBColor();
   let rbgUse = "<div style={{backgroundColor: rando.RandomRGBColor()}}></div>"
@@ -17,7 +17,14 @@ function App() {
   //   let rbga = rando.RandomRBGA()
   return (
     <div className="App">
-      <h1>JS-Rando Examples</h1>
+      <h1>JS-Rando Examples in React</h1>
+      <div className='code-block'>
+          <h3>npm install js-rando</h3>
+
+        <h3>import Rando from 'js-rando';</h3>
+        <h3>const rando = new Rando()</h3>
+      </div>
+
     <div class="content">
         <div class="section">
             <h2>Random value between 0 & 1</h2>
@@ -90,10 +97,12 @@ function App() {
                 <h3 id="random-hex-color-text">Random Hex Color</h3>
             </div>
             <div class="sub-section">
-            <h3 id="output">Use in React:</h3>
-                <h4 >{hexUse}
-            </h4>
-            <div class="color-block" style={{backgroundColor: hexColor}}></div>
+                <h3 id="output">Use in React:</h3>
+                    <h4 >{hexUse}
+                </h4>
+                <div class="parent-color">
+                    <div class="color-block" style={{backgroundColor: hexColor}}></div>
+                </div>
             </div>
         </div>
 
@@ -109,12 +118,11 @@ function App() {
             </div>
             <div class="sub-section">
                 <h3 id="output">Use in React:</h3>
-                <h4 >{rbgUse}
-            </h4>
-            <div class="parent-color">
+                <h4 >{rbgUse}</h4>
+                <div class="parent-color">
 
-            <div class="color-block" style={{backgroundColor: rbg}}></div>
-            </div>
+                    <div class="color-block" style={{backgroundColor: rbg}}></div>
+                </div>
             </div>
         </div>
         
