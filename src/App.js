@@ -4,6 +4,17 @@ import Rando from 'js-rando';
 
 function App() {
   let rando = new Rando()
+
+  let rbg = rando.RandomRGBColor();
+  let rbgUse = "<div style={{backgroundColor: rando.RandomRGBColor()}}></div>"
+
+  let hexColor = rando.RandomHexColor()
+  let hexUse = "<div style={{backgroundColor: rando.RandomHexColor()}}></div>"
+
+    let rbga = rando.RandomRGBAColor()
+    let rbgaUse = "<div style={{backgroundColor: rando.RandomRGBAColor()}}></div>"
+
+  //   let rbga = rando.RandomRBGA()
   return (
     <div className="App">
       <h1>JS-Rando Examples</h1>
@@ -64,7 +75,7 @@ function App() {
             </div>
             <div class="sub-section">
                 <h3 id="output">Output:</h3>
-                <h3 id="random-hex">Hello World</h3>
+                <h3 id="random-hex">{rando.RandomHex()}</h3>
             </div>
         </div>
 
@@ -79,9 +90,10 @@ function App() {
                 <h3 id="random-hex-color-text">Random Hex Color</h3>
             </div>
             <div class="sub-section">
-                <h3 id="output">JQuery Application:</h3>
-                <h4 class="color-block" id="random-hex-color">$('#random-hex-color').css("background-color", `${rando.RandomHexColor()}`)
-                </h4>
+            <h3 id="output">Use in React:</h3>
+                <h4 >{hexUse}
+            </h4>
+            <div class="color-block" style={{backgroundColor: hexColor}}></div>
             </div>
         </div>
 
@@ -93,12 +105,16 @@ function App() {
             </div>
             <div class="sub-section">
                 <h3 id="output">Output:</h3>
-                <h3 id="random-rbg-color-text">Random Hex Color</h3>
+                <h3 id="random-rbg-color-text">{rbg}</h3>
             </div>
             <div class="sub-section">
-                <h3 id="output">JQuery Application:</h3>
-                <h4 class="color-block" id="random-rbg-color">$('#random-rbg-color').css("background-color", `${rando.RandomRGBColor()}`)
+                <h3 id="output">Use in React:</h3>
+                <h4 >{rbgUse}
             </h4>
+            <div class="parent-color">
+
+            <div class="color-block" style={{backgroundColor: rbg}}></div>
+            </div>
             </div>
         </div>
         
@@ -111,12 +127,15 @@ function App() {
             </div>
             <div class="sub-section">
                 <h3 id="output">Output:</h3>
-                <h3 id="random-rbga-color-text">Random Hex Color</h3>
+                <h3 id="random-rbga-color-text">{rbga}</h3>
             </div>
-            <div class=""sub-section>
-                <h3 id="output">JQuery Application:</h3>
-                <h4 class="color-block" id="random-rbga-color">$('#random-rbga-color').css("background-color", `${rando.RandomRGBAColor()}`)
-                </h4>
+            <div class="sub-section">
+                <h3 id="output">Use in React:</h3>
+                <h4 >{rbgaUse}
+            </h4>
+            <div class="parent-color">
+            <div class="color-block" style={{backgroundColor: rbga}}></div>
+            </div>
             </div>
         </div>
     </div>

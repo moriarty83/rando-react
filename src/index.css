@@ -14,4 +14,17 @@ code {
 
 .section {
   border: 2px solid black;
+  width: 25em;
+}
+
+.color-block {
+  height: 5em;
+  width: 5em;
+  border: 2px solid black;
+}
+
+.parent-color {
+  height: 7em;
+  width: 7em;
+  background-image: url(https://e1.pngegg.com/pngimages/649/332/png-clipart-motivos-black-striped-pattern-art-thumbnail.png);
 }
